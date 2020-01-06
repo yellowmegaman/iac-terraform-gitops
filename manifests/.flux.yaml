@@ -1,0 +1,8 @@
+---
+version: 1
+commandUpdated:
+  generators:
+    - command: >-
+        cat namespaces/* | sed 's/envplaceholder/'$ENVNAME'/g'
+    - command: >-
+        cd workloads && cat */* | sed 's/envplaceholder/'$ENVNAME'/g' | sed 's/lbipplaceholder/'$LBIP'/g' | sed 's/domainplaceholder/'$ENVDOMAIN'/g'

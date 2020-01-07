@@ -61,11 +61,11 @@ spec:
           # based on 10 running nodes with 30 pods each
           resources:
             requests:
-              cpu: 300m
-              memory: 1000Mi
+              cpu: 100m
+              memory: 100Mi
             limits:
-              cpu: 300m
-              memory: 1000Mi
+              cpu: 100m
+              memory: 100Mi
           volumeMounts:
             - name: config-volume
               mountPath: /etc/config

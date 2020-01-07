@@ -10,7 +10,7 @@ metadata:
     app.kubernetes.io/component: prometheus
 spec:
   serviceName: prometheus
-  replicas: 2
+  replicas: 1
   podManagementPolicy: "Parallel"
   updateStrategy:
     type: "RollingUpdate"
@@ -62,10 +62,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 100Mi
+              memory: 300Mi
             limits:
               cpu: 100m
-              memory: 100Mi
+              memory: 300Mi
           volumeMounts:
             - name: config-volume
               mountPath: /etc/config

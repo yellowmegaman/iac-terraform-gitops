@@ -32,7 +32,7 @@ spec:
               subPath: ""
       containers:
         - name: prometheus-server
-          image: marketplace.gcr.io/google/prometheus:2.2
+          image: prom/prometheus:v2.15.1
           imagePullPolicy: "IfNotPresent"
           args:
             - --config.file=/etc/config/prometheus.yaml
